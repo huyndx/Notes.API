@@ -3,14 +3,15 @@
 ### API for app: https://play.google.com/store/apps/details?id=huynguyen.hnote
 
 ####Grand permission:
-       
+######Read saved hash
+
 >        String note_auth = getSharedPreferences(Globals.PREFS_NAME, 0).getString("_note_auth", "");
 >       if("".equals(note_auth)) {
 >           startActivityForResult(new Intent(this, GrandPerrmison.class), DEF_REQUEST_PERRMISSION);
 >       }else {
 >           testAccess(note_auth);
 >       }
-#
+######Intent result handle
 >      @Override
 >       protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 >           super.onActivityResult(requestCode, resultCode, data);
