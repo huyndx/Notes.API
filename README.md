@@ -1,7 +1,8 @@
 # Notes.API
 
-       # API for app: https://play.google.com/store/apps/details?id=huynguyen.hnote
-       Grand permission:
+### API for app: https://play.google.com/store/apps/details?id=huynguyen.hnote
+
+####Grand permission:
        
 >        String note_auth = getSharedPreferences(Globals.PREFS_NAME, 0).getString("_note_auth", "");
 >       if("".equals(note_auth)) {
@@ -21,8 +22,8 @@
 >               }catch (Exception ignore){}
 >           }
 >       }
-        
-        Access note data:
+
+####Access note data:
         
 >       void testAccess(String hash){
 >         Uri contentUri = Uri.parse("content://huynguyen.hnote.db/?hash=" + hash);
