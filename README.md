@@ -9,7 +9,7 @@
 >       if("".equals(note_auth)) {
 >               try{
 >               Intent intent = new Intent();
->               intent.setComponent(new ComponentName("huynguyen.hnote", "huynguyen.hnote.Activity.GrandPerrmison"));
+>               intent.setComponent(new ComponentName("huynguyen.hnote", "huynguyen.hnote.Activity.GrantPermission"));
 >               startActivityForResult(intent, DEF_REQUEST_PERRMISSION);
 >               }catch(Exception ignore){//app not instaled}
 >       }else {
@@ -36,7 +36,7 @@
 >         if(type.getQueryParameter("type").equals("0")){
 >               try{
 >               Intent intent = new Intent();
->               intent.setComponent(new ComponentName("huynguyen.hnote", "huynguyen.hnote.Activity.GrandPerrmison"));
+>               intent.setComponent(new ComponentName("huynguyen.hnote", "huynguyen.hnote.Activity.GrantPermission"));
 >               startActivityForResult(intent, DEF_REQUEST_PERRMISSION);
 >               }catch(Exception ignore){//app not instaled}
 >         }
