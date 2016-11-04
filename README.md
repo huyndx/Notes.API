@@ -2,7 +2,7 @@
 
 ### API for app: https://play.google.com/store/apps/details?id=huynguyen.hnote
 
-####Grand permission:
+####Grant permission:
 >
 > ######Read saved hash
 >        String note_auth = getSharedPreferences(Globals.PREFS_NAME, 0).getString("_note_auth", "");
