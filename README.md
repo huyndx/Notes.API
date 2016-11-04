@@ -7,7 +7,11 @@
 > ######Read saved hash
 >        String note_auth = getSharedPreferences(Globals.PREFS_NAME, 0).getString("_note_auth", "");
 >       if("".equals(note_auth)) {
->           startActivityForResult(new Intent(this, GrandPerrmison.class), DEF_REQUEST_PERRMISSION);
+>               try{
+>               Intent intent = new Intent();
+>               intent.setComponent(new ComponentName("huynguyen.hnote", "huynguyen.hnote.Activity.GrandPerrmison"));
+>               startActivityForResult(intent, DEF_REQUEST_PERRMISSION);
+>               }catch(Exception ignore){//app not instaled}
 >       }else {
 >           testAccess(note_auth);
 >       }
@@ -30,7 +34,11 @@
 >         Uri contentUri = Uri.parse("content://huynguyen.hnote.db/?hash=" + hash);
 >         Uri type =  Uri.parse(getContentResolver().getType(contentUri));
 >         if(type.getQueryParameter("type").equals("0")){
->             startActivityForResult(new Intent(this, GrandPerrmison.class), DEF_REQUEST_PERRMISSION);
+>               try{
+>               Intent intent = new Intent();
+>               intent.setComponent(new ComponentName("huynguyen.hnote", "huynguyen.hnote.Activity.GrandPerrmison"));
+>               startActivityForResult(intent, DEF_REQUEST_PERRMISSION);
+>               }catch(Exception ignore){//app not instaled}
 >         }
 >        Cursor cursor = getContentResolver().query(contentUri,null,null,null,null);
 >         if (cursor != null && cursor.moveToFirst()) {
