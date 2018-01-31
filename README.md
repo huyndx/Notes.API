@@ -5,6 +5,7 @@
 ####Grant permission:
 >
 > ######Read saved hash
+
 >        String note_auth = getSharedPreferences(Globals.PREFS_NAME, 0).getString("_note_auth", "");
 >       if("".equals(note_auth)) {
 >               try{
@@ -15,7 +16,9 @@
 >       }else {
 >           testAccess(note_auth);
 >       }
+
 > ######Intent result handle
+
 >      @Override
 >       protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 >           super.onActivityResult(requestCode, resultCode, data);
